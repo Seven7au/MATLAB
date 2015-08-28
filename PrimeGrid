@@ -2,9 +2,8 @@ function [gridA,gridB] = primegrid(n)
 %% creates two n-by-n matrices of prime numbers and zeros - one the transposition of the other
 A = zeros(n);
 B = 1:(n^2);
-C = primes(n^3);
 for i = 1:length(B);
-    if ismember(B(i),C) == 1
+    if isprime(B(i)) == 1
         A(i) = B(i);
     end
 end
